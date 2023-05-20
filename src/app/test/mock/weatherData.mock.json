@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -112.074,
+        "lat": 33.4484
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 294.91,
+        "feels_like": 294.55,
+        "temp_min": 292.94,
+        "temp_max": 296.59,
+        "pressure": 1014,
+        "humidity": 54
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.26,
+        "deg": 349,
+        "gust": 1.67
+    },
+    "clouds": {
+        "all": 14
+    },
+    "dt": 1684576928,
+    "sys": {
+        "type": 2,
+        "id": 2034302,
+        "country": "US",
+        "sunrise": 1684585500,
+        "sunset": 1684635895
+    },
+    "timezone": -25200,
+    "id": 5308655,
+    "name": "Phoenix",
+    "cod": 200
+}
