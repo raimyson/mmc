@@ -1,0 +1,121 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <svg class='fontawesomesvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path
+      d="M137.9 3c-4.5-3.2-10.3-3.9-15.4-1.8s-8.8 6.7-9.7 12.2L98.7 98.7 13.4 112.8c-5.5 .9-10.1 4.6-12.2 9.7S-.2 133.4 3 137.9l50.3 70.3L3 278.5c-3.2 4.5-3.9 10.3-1.8 15.4s6.7 8.8 12.2 9.7l85.3 14.1L112.8 403c.9 5.5 4.6 10.1 9.7 12.2s10.9 1.4 15.4-1.8l55.2-39.5c-19.9-21.9-32.3-50.8-33.1-82.6c-17.6-10.2-32.2-26.1-40.6-46.3c-20.3-49 3-105.1 52-125.4c29.4-12.2 61.4-8.7 86.7 6.7c13.1-21.8 32.5-39.4 55.8-50.3L303.6 13.4c-.9-5.5-4.6-10.1-9.7-12.2S282.9-.2 278.5 3L208.2 53.3 137.9 3zM291.4 415.9c-2.5 .6-5.1 .6-7.6-.1c1.4 0 2.8 .1 4.2 .1h3.5zm-46.3-260c-17.3-12.2-40.4-15.6-61.5-6.9c-32.7 13.5-48.2 51-34.6 83.6c3.6 8.7 8.9 16.1 15.3 22.2c10.6-39.7 39.9-71.8 77.8-86.4c.8-4.3 1.8-8.4 3-12.5zM277.4 420c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm96 0c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm96 0c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm96 0c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm74.5-116.1c0-39.3-28.4-72.1-65.8-78.7c1.2-5.6 1.9-11.3 1.9-17.2c0-44.2-35.8-80-80-80c-17 0-32.8 5.3-45.8 14.4C433.3 114.6 402.8 96 368 96c-53 0-96 43-96 96l0 1.3c-45.4 7.6-80 47.1-80 94.6c0 53 43 96 96 96H559.9c44.2 0 80-35.8 80-80z" />
+  </svg>
+  <span>MMC Weather</span>
+  <div class="spacer"></div>
+</div>
+
+<div class="content">
+  <div class="card-container">
+    <form #form="ngForm" (submit)="submitLocation()">
+      <input type="hidden" name="selectCity" [(ngModel)]="selectCity">
+      <input type="hidden" name="selectState" [(ngModel)]="selectState">
+      <input type="hidden" name="selectContry" [(ngModel)]="selectContry">
+      <input type="hidden" name="selectLat" [(ngModel)]="selectLat">
+      <input type="hidden" name="selectLon" [(ngModel)]="selectLon">
+
+      <input type="text" class="filterCapital" (ngModelChange)="getCapitalState()"  name="filterCapital" placeholder="Filter Capital" [(ngModel)]="filterCapital">
+
+      <button class="card card-small" *ngFor="let item of capitalStatesList"
+        (click)="
+        selectCity = item.name;
+        selectState=item.state;
+        selectContry=item.contry;
+        selectLat=item.coord.lat; 
+        selectLon=item.coord.lon;
+        " tabindex="0"
+        >
+        <span>{{item.name}} - {{item.state}}</span>
+      </button>
+      
+    </form>
+  </div>
+  <div class="info" *ngIf="weatherData">
+    <div class="basic">
+      <div class="city">{{selectCity}} - {{selectState}}</div>
+      <div class="temperature">
+        <div class="image fas fa-cloud" *ngIf="weather == 'Mist' || weather == 'Clouds' || weather == 'Fog'"></div>
+        <div class="image fas fa-sun" *ngIf="weather == 'Clear'"></div>
+        <div class="image fas fa-cloud-rain" *ngIf="weather == 'Rain' || weather == 'Drizzle'"></div>
+        <div class="image fas fa-cloud-showers-heavy" *ngIf="weather == 'Thunderstorm'"></div>
+        <div class="image fas fa-smog" *ngIf="weather == 'Smoke'"></div>
+        <div class="image fas fa-cloud-sun-rain" *ngIf="weather == 'Haze'"></div>
+        <div class="weather">{{weatherData?.main?.temp | number : '1.0-0'}}°C
+          <p class="fell">Fells like {{weatherData?.main?.feels_like | number : '1.0-0'}}°C</p>
+        </div>
+      </div>
+    </div>
+    <div class="allData">
+      <div class="data">
+        <span class="icon fas fa-temperature-low"></span>
+        <span class="value">{{weatherData?.main?.temp_min| number : '1.0-0'}}°C</span>
+      </div>
+      <div class="data">
+        <span class="icon fas fa-temperature-high"></span>
+        <span class="value">{{weatherData?.main?.temp_max| number : '1.0-0'}}°C</span>
+      </div>
+      <div class="data">
+        <span class="icon fas fa-wind"></span>
+        <span class="value">{{weatherData?.wind?.speed| number : '1.0-0'}} m/s</span>
+      </div>
+      <div class="data">
+        <span class="icon fas fa-smog"></span>
+        <span class="value">{{airPollutionText}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="content">
+  <div class="card-container">
+    <input type="hidden" #selection>
+    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+      <span>Alabama - Montgomery</span>
+    </button>
+    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+      <span>Alaska - Juneau</span>
+    </button>
+    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+      <span>Arizona - Phoenix</span>
+    </button>
+  </div>
+  <div class="info">
+    <div class="basic">
+      <div class="city">Alabama - Montgomery</div>
+      <div class="temperature">
+        <div class="image hot">
+          <svg class='fontawesomesvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zm32 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128z" />
+          </svg>
+        </div>
+        <div class="weather">18°C
+          <p class="fell">Fells like 16°C</p>
+        </div>
+      </div>
+    </div>
+    <div class="allData">
+      <div class="data">
+        <span class="icon fas fa-temperature-low"></span>
+        <span class="value">7°C</span>
+      </div>
+      <div class="data">
+        <span class="icon fas fa-temperature-high"></span>
+        <span class="value">22°C</span>
+      </div>
+      <div class="data">
+        <span class="icon fas fa-wind"></span>
+        <span class="value">2 m/s</span>
+      </div>
+      <div class="data">
+        <span class="icon fas fa-smog"></span>
+        <span class="value">Good</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<router-outlet></router-outlet>

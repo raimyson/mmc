@@ -1,0 +1,452 @@
+[
+    {
+        "contry": "US",
+        "state": "Alabama",
+        "name": "Montgomery",
+        "coord": {
+            "lat": 32.377716,
+            "lon": -86.300568
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Alaska",
+        "name": "Juneau",
+        "coord": {
+            "lat": 58.301598,
+            "lon": -134.420212
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Arizona",
+        "name": "Phoenix",
+        "coord": {
+            "lat": 33.448143,
+            "lon": -112.096962
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Arkansas",
+        "name": "Little Rock",
+        "coord": {
+            "lat": 34.746613,
+            "lon": -92.288986
+        }
+    },
+    {
+        "contry": "US",
+        "state": "California",
+        "name": "Sacramento",
+        "coord": {
+            "lat": 38.576668,
+            "lon": -121.493629
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Colorado",
+        "name": "Denver",
+        "coord": {
+            "lat": 39.739227,
+            "lon": -104.984856
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Connecticut",
+        "name": "Hartford",
+        "coord": {
+            "lat": 41.764046,
+            "lon": -72.682198
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Delaware",
+        "name": "Dover",
+        "coord": {
+            "lat": 39.157307,
+            "lon": -75.519722
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Hawaii",
+        "name": "Honolulu",
+        "coord": {
+            "lat": 21.307442,
+            "lon": -157.857376
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Florida",
+        "name": "Tallahassee",
+        "coord": {
+            "lat": 30.438118,
+            "lon": -84.281296
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Georgia",
+        "name": "Atlanta",
+        "coord": {
+            "lat": 33.749027,
+            "lon": -84.388229
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Idaho",
+        "name": "Boise",
+        "coord": {
+            "lat": 43.617775,
+            "lon": -116.199722
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Illinois",
+        "name": "Springfield",
+        "coord": {
+            "lat": 39.798363,
+            "lon": -89.654961
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Indiana",
+        "name": "Indianapolis",
+        "coord": {
+            "lat": 39.768623,
+            "lon": -86.162643
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Iowa",
+        "name": "Des Moines",
+        "coord": {
+            "lat": 41.591087,
+            "lon": -93.603729
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Kansas",
+        "name": "Topeka",
+        "coord": {
+            "lat": 39.048191,
+            "lon": -95.677956
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Kentucky",
+        "name": "Frankfort",
+        "coord": {
+            "lat": 38.186722,
+            "lon": -84.875374
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Louisiana",
+        "name": "Baton Rouge",
+        "coord": {
+            "lat": 30.457069,
+            "lon": -91.187393
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Maine",
+        "name": "Augusta",
+        "coord": {
+            "lat": 44.307167,
+            "lon": -69.781693
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Maryland",
+        "name": "Annapolis",
+        "coord": {
+            "lat": 38.978764,
+            "lon": -76.490936
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Massachusetts",
+        "name": "Boston",
+        "coord": {
+            "lat": 42.358162,
+            "lon": -71.063698
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Michigan",
+        "name": "Lansing",
+        "coord": {
+            "lat": 42.733635,
+            "lon": -84.555328
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Minnesota",
+        "name": "St. Paul",
+        "coord": {
+            "lat": 44.955097,
+            "lon": -93.102211
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Mississippi",
+        "name": "Jackson",
+        "coord": {
+            "lat": 32.303848,
+            "lon": -90.182106
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Missouri",
+        "name": "Jefferson City",
+        "coord": {
+            "lat": 38.579201,
+            "lon": -92.172935
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Montana",
+        "name": "Helena",
+        "coord": {
+            "lat": 46.585709,
+            "lon": -112.018417
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Nebraska",
+        "name": "Lincoln",
+        "coord": {
+            "lat": 40.808075,
+            "lon": -96.699654
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Nevada",
+        "name": "Carson City",
+        "coord": {
+            "lat": 39.163914,
+            "lon": -119.766121
+        }
+    },
+    {
+        "contry": "US",
+        "state": "New Hampshire",
+        "name": "Concord",
+        "coord": {
+            "lat": 43.206898,
+            "lon": -71.537994
+        }
+    },
+    {
+        "contry": "US",
+        "state": "New Jersey",
+        "name": "Trenton",
+        "coord": {
+            "lat": 40.220596,
+            "lon": -74.769913
+        }
+    },
+    {
+        "contry": "US",
+        "state": "New Mexico",
+        "name": "Santa Fe",
+        "coord": {
+            "lat": 35.68224,
+            "lon": -105.939728
+        }
+    },
+    {
+        "contry": "US",
+        "state": "North Carolina",
+        "name": "Raleigh",
+        "coord": {
+            "lat": 35.78043,
+            "lon": -78.639099
+        }
+    },
+    {
+        "contry": "US",
+        "state": "North Dakota",
+        "name": "Bismarck",
+        "coord": {
+            "lat": 46.82085,
+            "lon": -100.783318
+        }
+    },
+    {
+        "contry": "US",
+        "state": "New York",
+        "name": "Albany",
+        "coord": {
+            "lat": 42.652843,
+            "lon": -73.757874
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Ohio",
+        "name": "Columbus",
+        "coord": {
+            "lat": 39.961346,
+            "lon": -82.999069
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Oklahoma",
+        "name": "Oklahoma City",
+        "coord": {
+            "lat": 35.492207,
+            "lon": -97.503342
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Oregon",
+        "name": "Salem",
+        "coord": {
+            "lat": 44.938461,
+            "lon": -123.030403
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Pennsylvania",
+        "name": "Harrisburg",
+        "coord": {
+            "lat": 40.264378,
+            "lon": -76.883598
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Rhode Island",
+        "name": "Providence",
+        "coord": {
+            "lat": 41.830914,
+            "lon": -71.414963
+        }
+    },
+    {
+        "contry": "US",
+        "state": "South Carolina",
+        "name": "Columbia",
+        "coord": {
+            "lat": 34.000343,
+            "lon": -81.033211
+        }
+    },
+    {
+        "contry": "US",
+        "state": "South Dakota",
+        "name": "Pierre",
+        "coord": {
+            "lat": 44.367031,
+            "lon": -100.346405
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Tennessee",
+        "name": "Nashville",
+        "coord": {
+            "lat": 36.16581,
+            "lon": -86.784241
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Texas",
+        "name": "Austin",
+        "coord": {
+            "lat": 30.27467,
+            "lon": -97.740349
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Utah",
+        "name": "Salt Lake City",
+        "coord": {
+            "lat": 40.777477,
+            "lon": -111.888237
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Vermont",
+        "name": "Montpelier",
+        "coord": {
+            "lat": 44.262436,
+            "lon": -72.580536
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Virginia",
+        "name": "Richmond",
+        "coord": {
+            "lat": 37.538857,
+            "lon": -77.43364
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Washington",
+        "name": "Olympia",
+        "coord": {
+            "lat": 47.035805,
+            "lon": -122.905014
+        }
+    },
+    {
+        "contry": "US",
+        "state": "West Virginia",
+        "name": "Charleston",
+        "coord": {
+            "lat": 38.336246,
+            "lon": -81.612328
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Wisconsin",
+        "name": "Madison",
+        "coord": {
+            "lat": 43.074684,
+            "lon": -89.384445
+        }
+    },
+    {
+        "contry": "US",
+        "state": "Wyoming",
+        "name": "Cheyenne",
+        "coord": {
+            "lat": 41.140259,
+            "lon": -104.820236
+        }
+    }
+]

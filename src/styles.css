@@ -1,0 +1,277 @@
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 16px;
+}
+
+.toolbar .fontawesomesvg {
+    width: 4.5em;
+    font-size: small;
+    fill: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.toolbar span {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    /* max-width: 960px; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+svg.material-icons {
+    height: 24px;
+    width: auto;
+}
+
+svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+}
+
+.card svg.material-icons path {
+    fill: #888;
+}
+
+.card-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 16px; */
+    width: 65%;
+}
+
+.card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 20px;
+    width: 230px;
+    margin: 0 8px 5px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    float: left;
+}
+
+.card-container .card:not(:last-child) {
+    margin-right: 0;
+}
+
+.card.card-small {
+    height: 12px;
+    width: 175px;
+}
+
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+}
+
+.card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+}
+
+.card.card.highlight-card span {
+    margin-left: 60px;
+}
+
+
+.info {
+    background-color: rgb(25 118 210 / 50%);
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.info .basic {
+    padding: 5px 20px;
+    margin-bottom: 15px;
+}
+
+.info .city {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-variant-caps: all-petite-caps;
+    justify-content: center;
+    display: flex;
+}
+
+.info .temperature {
+    display: flex;
+    justify-content: center;
+}
+
+.info .fell {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.info .temperature .image {
+    margin-right: 20px;
+    margin-left: 10px;
+    font-size: 70px;
+    color: white;
+}
+
+
+.info .hot {
+    fill: #FFE87C;
+}
+
+.info .weather {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.info .allData {
+    background-color: #1976d2;
+    padding: 15px 0px 0px 15px;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flow-root;
+    /* display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-width: 265px;*/
+}
+
+.allData .data {
+    width: 45%;
+    float: left;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
+
+.allData .data .icon {
+    font-size: 30px;
+    color: white;
+    margin-right: 10px;
+}
+
+.allData .value {
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+}
+
+.filterCapital {
+    color: gray;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    height: 25px;
+}
+
+.filterCapital:focus:enabled,
+.filterCapital:hover {
+    box-shadow: none;
+    border: 2px solid gray;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+    .content {
+        display: block;
+    }
+
+    .card-container {
+        width: 100%;
+        height: 470px;
+        overflow-x: scroll;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .card-container {
+        overflow-y: hidden;
+        line-height: 1em;
+    }
+
+    .filterCapital {
+        height: 45px;
+        font-size: 30px;
+    }
+
+    button.card.card-small {
+        width: 90%;
+        height: 37px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .info {
+        padding-bottom: 10px;
+    }
+    
+}
