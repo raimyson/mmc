@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { OpenWeatherService } from './service/open-weather.service';
 import { OpenWeatherMapData } from './models/weather.models';
 import { AirPollutionData, List } from './models/airpollution.models';
 import { CapitalData } from './models/capitalstates.models';
-import { CapitalStatesUsaService } from './service/capital-states-usa.service';
+import { OpenWeatherService } from './service/openWeather/open-weather.service';
+import { CapitalStatesUsaService } from './service/capitalStates/capital-states-usa.service';
 
 @Component({
   selector: 'app-root',

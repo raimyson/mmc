@@ -2,7 +2,7 @@ export interface OpenWeatherMapData {
     coord: Coord
     weather: Weather[]
     base: string
-    main: Main
+    main: Main | undefined
     visibility: number
     wind: Wind
     clouds: Clouds

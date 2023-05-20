@@ -41,12 +41,10 @@ p {
     margin: 0 16px;
 }
 
-.toolbar .fontawesomesvg {
-    width: 4.5em;
-    font-size: small;
-    fill: white;
+.toolbar .icon.fas.fa-cloud-sun-rain {
     margin-left: 15px;
     margin-right: 15px;
+    font-size: 45px;
 }
 
 .toolbar span {
@@ -238,6 +236,14 @@ svg.material-icons:not(:last-child) {
     border: 2px solid gray;
 }
 
+.mat-mdc-snack-bar-container {
+    --mdc-snackbar-container-color: #ee8080;
+}
+
+.mat-mdc-snack-bar-label.mdc-snackbar__label {
+    font-weight: 500;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 
@@ -275,3 +281,5 @@ svg.material-icons:not(:last-child) {
     }
     
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

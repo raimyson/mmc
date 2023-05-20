@@ -1,9 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { OpenWeatherMapData } from '../models/weather.models';
 import { Observable } from 'rxjs';
-import { AirPollutionData } from '../models/airpollution.models';
+import { OpenWeatherMapData } from 'src/app/models/weather.models';
+import { AirPollutionData } from 'src/app/models/airpollution.models';
 
 
 @Injectable({
